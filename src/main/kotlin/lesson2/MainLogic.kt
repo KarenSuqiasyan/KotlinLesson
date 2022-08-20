@@ -5,7 +5,6 @@ import java.util.*
 class MainLogic {
 
     companion object {
-        var userClass = UserClass()
 
         fun maxNumber(array: MutableList<Int>) {
             var largestElement = array[0]
@@ -13,8 +12,7 @@ class MainLogic {
                 if (largestElement < number)
                     largestElement = number
             }
-            println("the largest element in array is : $largestElement")
-            userClass.startMethod()
+            println("\nthe largest element in array is : $largestElement")
         }
 
         fun minNumber(array: MutableList<Int>) {
@@ -23,13 +21,11 @@ class MainLogic {
                 if (smallestElement > number)
                     smallestElement = number
             }
-            println("the smallest element in array is : $smallestElement")
-            userClass.startMethod()
+            println("\nthe smallest element in array is : $smallestElement")
         }
 
         fun showList(array: MutableList<Int>) {
-            println("this is the arrayList : $array")
-            userClass.startMethod()
+            println("\nthis is the arrayList : $array")
         }
 
         fun minToMaxSort(array: MutableList<Int>): MutableList<Int> {
@@ -46,8 +42,7 @@ class MainLogic {
                     }
                 }
             }
-            println(array)
-            userClass.startMethod()
+            println("the sorted Array from min -> max $array")
             return array
         }
 
@@ -64,13 +59,12 @@ class MainLogic {
                     }
                 }
             }
-            println(array)
-            userClass.startMethod()
+            println("the sorted Array from max -> min $array")
             return array
         }
 
         fun findTheCountOfNumber(array: MutableList<Int>): Int {
-            println("please enter the number")
+            println("\nplease enter the number")
             val scan = Scanner(System.`in`)
             val number = scan.nextInt()
             var count = 0
@@ -79,8 +73,7 @@ class MainLogic {
                     count++
                 }
             }
-            println("number of $number in array is $count")
-            userClass.startMethod()
+            println("\nnumber of $number in array is $count")
             return count
         }
 
