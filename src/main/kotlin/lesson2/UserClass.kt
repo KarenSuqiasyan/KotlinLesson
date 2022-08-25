@@ -51,4 +51,7 @@ class UserClass {
             2 -> startMethod()
         }
     }
+    fun continueMethod () {
+
+    }
 }
