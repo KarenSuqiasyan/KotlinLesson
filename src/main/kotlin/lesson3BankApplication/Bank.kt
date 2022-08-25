@@ -13,19 +13,39 @@ class Bank {
         val name = scan.next()
         println("\n surname: ")
         val sName = scan.next()
-        println("\n age: ")
-        var age: Int = scan.nextInt()
-        while (age < 18 || age > 100) {
-            println("please enter correct age")
+        var age: Int = 0
+        do {
+            println("\n age: ")
+            while (!scan.hasNextInt()) {
+                val input: String = scan.next()
+                println("$input is not a valid number")
+                println("please enter the valid number")
+            }
             age = scan.nextInt()
-        }
-        println("\n salary: ")
-        val salary = scan.nextInt()
-        println("\n id: ")
-        var id = scan.nextInt()
+        } while (age < 0)
+        var salary: Int = 0
+        do {
+            println("\n salary: ")
+            while (!scan.hasNextInt()) {
+                val input: String = scan.next()
+                println("$input is not a valid number")
+                println("please enter the valid number")
+            }
+            salary = scan.nextInt()
+        } while (salary < 0)
+        var id: Int = 0
+        do {
+            println("\n id: ")
+            while (!scan.hasNextInt()) {
+                val input: String = scan.next()
+                println("$input is not a valid number")
+                println("please enter the valid number")
+            }
+            id = scan.nextInt()
+        } while (id < 0)
         for (value in usersList) {
             while (id == value.id) {
-                println("wrong ID, there is a user with tish ID")
+                println("wrong ID, there is a user with this ID")
                 println("enter correct ID")
                 id = scan.nextInt()
             }
