@@ -1,7 +1,7 @@
 package lesson4BankApplication.usercomunication
 
 import lesson4BankApplication.action.calculator
-import lesson4BankApplication.action.showCustomerList
+import lesson4BankApplication.action.getLoan
 import java.util.*
 
 object CustomerMenu {
@@ -16,7 +16,7 @@ object CustomerMenu {
 
         when (scan.nextInt()) {
             1 -> registration()
-            2 -> goToBank()
+            2 -> BankProducts.menuForBankProducts()
             3 -> calculator()
             4 -> MainMenu.mainMenu()
         }
