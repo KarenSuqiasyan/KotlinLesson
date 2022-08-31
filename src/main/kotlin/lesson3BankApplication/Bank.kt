@@ -1,5 +1,8 @@
 package lesson3BankApplication
 
+import lesson3BankApplication.menu.UserCommunicationClass
+import lesson3BankApplication.model.User
+
 class Bank {
 
     var usersList = mutableListOf<User>()
@@ -7,8 +10,8 @@ class Bank {
     //    private var scan = Scanner(System.`in`)
     private var scan = UserCommunicationClass.scan
 
-    fun registration() {
 
+    fun registration() {
         println("\n name: ")
         val name = scan.next()
         println("\n surname: ")

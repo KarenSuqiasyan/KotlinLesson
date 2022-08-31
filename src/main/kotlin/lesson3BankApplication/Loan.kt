@@ -1,5 +1,6 @@
 package lesson3BankApplication
 
+import lesson3BankApplication.menu.UserCommunicationClass
 import java.util.*
 
 class Loan {

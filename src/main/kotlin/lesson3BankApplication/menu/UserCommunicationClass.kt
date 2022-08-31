@@ -1,13 +1,13 @@
-package lesson3BankApplication
+package lesson3BankApplication.menu
 
 import lesson2.MainLogic
+import lesson3BankApplication.Bank
 import java.util.*
 
 object UserCommunicationClass {
 
     var scan = Scanner(System.`in`)
     private var bank = Bank()
-
 
     fun start() {
         bank.userGeneration()
@@ -28,6 +28,8 @@ object UserCommunicationClass {
             5 -> System.out
         }
     }
+
+
 }
 
 

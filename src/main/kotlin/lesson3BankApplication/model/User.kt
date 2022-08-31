@@ -1,4 +1,6 @@
-package lesson3BankApplication
+package lesson3BankApplication.model
+
+import lesson3BankApplication.Loan
 
 data class User(
     var id: Int,
@@ -7,4 +9,5 @@ data class User(
     var age: Int,
     var salary: Int,
     var loanList: MutableList<Loan> = mutableListOf()
+
 )
