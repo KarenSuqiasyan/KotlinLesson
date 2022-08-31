@@ -1,8 +1,7 @@
-package lesson4BankApplication.usercomunication.mainmenu
+package lesson4BankApplication.usercomunication
 
 import lesson4BankApplication.usercomunication.bankmenu.BankMenu
 import lesson4BankApplication.usercomunication.customermenu.CustomerMenu
-import lesson4BankApplication.usercomunication.customermenu.CustomerMenuEnum
 
 object MainMenu {
     fun mainMenu() {

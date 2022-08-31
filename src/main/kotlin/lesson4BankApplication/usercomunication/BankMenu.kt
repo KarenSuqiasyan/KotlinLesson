@@ -3,7 +3,7 @@ package lesson4BankApplication.usercomunication.bankmenu
 import lesson4BankApplication.action.showCustomerList
 import lesson4BankApplication.action.showLoanList
 import lesson4BankApplication.usercomunication.customermenu.CustomerMenu
-import lesson4BankApplication.usercomunication.mainmenu.MainMenu
+import lesson4BankApplication.usercomunication.MainMenu
 
 object BankMenu {
     fun menuForBank() {
