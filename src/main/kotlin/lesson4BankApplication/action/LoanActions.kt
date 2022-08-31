@@ -3,6 +3,7 @@ package lesson4BankApplication.action
 import lesson4BankApplication.model.bank.Bank
 import lesson4BankApplication.model.bank.Loan
 import lesson4BankApplication.model.customer.Customer
+import lesson4BankApplication.usercomunication.BankMenu
 import lesson4BankApplication.usercomunication.CustomerMenu
 
 fun loan(customer: Customer) {
@@ -33,4 +34,14 @@ fun loanApprove(sum: Int, term: Int, salary: Int): Boolean {
     } else {
         true
     }
+}
+
+fun showLoanList () {
+    Bank.loanList.forEach {
+        println(it)
+        if (it.equals(null)) {
+            println("there is no loan yet")
+        }
+    }
+    BankMenu.menuForBank()
 }

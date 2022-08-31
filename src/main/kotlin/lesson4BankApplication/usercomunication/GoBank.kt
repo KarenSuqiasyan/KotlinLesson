@@ -16,6 +16,7 @@ fun goToBank() {
         }
     } else {
         println("you are not our customer")
-        registration()
+        println("please registration first")
+        CustomerMenu.menuForCustomer()
     }
 }
