@@ -7,49 +7,49 @@ import lesson4BankApplication.usercomunication.customermenu.CustomerMenu
 
 fun registration() {
 
-    println("\n name: ")
+    print("\n name: ")
     val name = CustomerMenu.scan.next()
-    println("\n surname: ")
+    print("\n surname: ")
     val sName = CustomerMenu.scan.next()
     var age: Int
     do {
-        println("\n age: ")
+        print("\n age: ")
         while (!CustomerMenu.scan.hasNextInt()) {
             val input: String = CustomerMenu.scan.next()
             println("$input is not a valid number")
-            println("please enter the valid number")
+            print("please enter the valid number")
         }
         age = CustomerMenu.scan.nextInt()
     } while (age < 0)
     var salary: Int
     do {
-        println("\n salary: ")
+        print("\n salary: ")
         while (!CustomerMenu.scan.hasNextInt()) {
             val input: String = CustomerMenu.scan.next()
             println("$input is not a valid number")
-            println("please enter the valid number")
+            print("please enter the valid number")
         }
         salary = CustomerMenu.scan.nextInt()
     } while (salary < 0)
     var id: Int
     do {
-        println("\n id: ")
+        print("\n id: ")
         while (!CustomerMenu.scan.hasNextInt()) {
             val input: String = CustomerMenu.scan.next()
             println("$input is not a valid number")
-            println("please enter the valid number")
+            print("please enter the valid number")
         }
         id = CustomerMenu.scan.nextInt()
     } while (id < 0)
     for (value in Bank.customers) {
         while (id == value.key) {
             println("wrong ID, there is a customer with this ID")
-            println("enter correct ID")
+            print("enter correct ID")
             id = CustomerMenu.scan.nextInt()
         }
     }
     val passport = Passport(name = name, sName = sName, age = age, id = id)
-    val customer = Customer(salary = salary, passport)
+    val customer = Customer(salary = salary, passport = passport)
     Bank.customers[id] = customer
     println("registration completed")
     CustomerMenu.menuForCustomer()

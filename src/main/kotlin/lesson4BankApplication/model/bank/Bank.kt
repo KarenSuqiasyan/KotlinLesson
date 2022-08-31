@@ -6,5 +6,6 @@ object Bank {
 
     var loanList: MutableMap<Int, List<Loan>> = mutableMapOf()
     var customers: MutableMap<Int, Customer> = mutableMapOf()
+    var balanceList: MutableMap<Int, Int> = mutableMapOf()
 
 }

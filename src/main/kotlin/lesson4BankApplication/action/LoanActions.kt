@@ -36,11 +36,13 @@ fun loanApprove(sum: Int, term: Int, salary: Int): Boolean {
 }
 
 fun showLoanList() {
-    Bank.loanList.forEach {
-        println(it)
-        if (it.equals(null)) {
-            println("there is no loan yet")
+    if (Bank.loanList.isEmpty()) {
+        println("there is no loan yet")
+        BankMenu.menuForBank()
+    } else {
+        Bank.loanList.forEach {
+            println(it)
         }
+        BankMenu.menuForBank()
     }
-    BankMenu.menuForBank()
 }
