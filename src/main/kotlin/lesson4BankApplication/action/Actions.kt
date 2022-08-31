@@ -2,8 +2,8 @@ package lesson4BankApplication.action
 
 
 import lesson4BankApplication.model.bank.Bank
-import lesson4BankApplication.usercomunication.BankMenu
-import lesson4BankApplication.usercomunication.CustomerMenu
+import lesson4BankApplication.usercomunication.bankmenu.BankMenu
+import lesson4BankApplication.usercomunication.customermenu.CustomerMenu
 
 fun calculator(): Int {
     println("sum: ")

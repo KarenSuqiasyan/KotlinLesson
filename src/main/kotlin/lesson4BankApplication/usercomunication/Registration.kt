@@ -3,6 +3,7 @@ package lesson4BankApplication.usercomunication
 import lesson4BankApplication.model.bank.Bank
 import lesson4BankApplication.model.customer.Customer
 import lesson4BankApplication.model.customer.Passport
+import lesson4BankApplication.usercomunication.customermenu.CustomerMenu
 
 fun registration() {
 

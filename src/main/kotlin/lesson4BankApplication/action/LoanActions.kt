@@ -3,8 +3,8 @@ package lesson4BankApplication.action
 import lesson4BankApplication.model.bank.Bank
 import lesson4BankApplication.model.bank.Loan
 import lesson4BankApplication.model.customer.Customer
-import lesson4BankApplication.usercomunication.BankMenu
-import lesson4BankApplication.usercomunication.CustomerMenu
+import lesson4BankApplication.usercomunication.bankmenu.BankMenu
+import lesson4BankApplication.usercomunication.customermenu.CustomerMenu
 
 fun loan(customer: Customer) {
 
@@ -22,13 +22,12 @@ fun loan(customer: Customer) {
         Bank.loanList[customer.passport.id] = listOf(loan)
         CustomerMenu.menuForCustomer()
     } else {
-        println("your loan is rejected")
         CustomerMenu.menuForCustomer()
     }
 }
 
 fun loanApprove(sum: Int, term: Int, salary: Int): Boolean {
-    return if (sum > salary * 2) {
+    return if (sum > salary * 2 || term > 120) {
         println("your loan is rejected")
         false
     } else {
@@ -36,7 +35,7 @@ fun loanApprove(sum: Int, term: Int, salary: Int): Boolean {
     }
 }
 
-fun showLoanList () {
+fun showLoanList() {
     Bank.loanList.forEach {
         println(it)
         if (it.equals(null)) {

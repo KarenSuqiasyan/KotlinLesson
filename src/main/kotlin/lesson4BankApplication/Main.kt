@@ -1,7 +1,6 @@
 package lesson4BankApplication
 
-import lesson4BankApplication.usercomunication.CustomerMenu
-import lesson4BankApplication.usercomunication.MainMenu
+import lesson4BankApplication.usercomunication.mainmenu.MainMenu
 
 fun main() {
     MainMenu.mainMenu()

@@ -1,7 +1,7 @@
 package lesson4BankApplication.action
 
 import lesson4BankApplication.model.bank.Bank
-import lesson4BankApplication.usercomunication.CustomerMenu
+import lesson4BankApplication.usercomunication.customermenu.CustomerMenu
 
 fun getLoan() {
 
