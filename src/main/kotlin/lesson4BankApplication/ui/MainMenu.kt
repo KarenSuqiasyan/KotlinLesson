@@ -1,17 +1,19 @@
-package lesson4BankApplication.usercomunication
+package lesson4BankApplication.ui
 
-import lesson4BankApplication.usercomunication.bankmenu.BankMenu
-import lesson4BankApplication.usercomunication.customermenu.CustomerMenu
+import lesson4BankApplication.ui.customer.CustomerMenu
+import java.util.*
 
 object MainMenu {
+    var scan = Scanner(System.`in`)
     fun mainMenu() {
         for (actions in MainMenuEnum.values()) {
             println(actions)
         }
-        when (CustomerMenu.scan.nextInt()) {
+        when (scan.nextInt()) {
             1 -> CustomerMenu.menuForCustomer()
             2 -> BankMenu.menuForBank()
             3 -> System.out
+            else -> mainMenu()
         }
     }
 }
