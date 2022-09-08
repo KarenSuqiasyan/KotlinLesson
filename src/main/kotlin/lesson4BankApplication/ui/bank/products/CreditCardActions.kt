@@ -6,22 +6,22 @@ import lesson4BankApplication.model.bank.creditcard.CreditCardEnum
 import lesson4BankApplication.model.customer.Customer
 import lesson4BankApplication.ui.customer.CustomerMenu
 import lesson4BankApplication.ui.MainMenu
-import lesson4BankApplication.ui.customer.CustomerMenuActions
 
 class CreditCardActions {
 
     private lateinit var card: CreditCard
+    private val cards = mutableListOf<CreditCard>()
 
     fun getCreditCard() {
 
         println("we can offer you a Credit Card")
         println("please wright your ID: ")
         val id: Int = MainMenu.scan.nextInt()
-        val isCustomer = Bank.customers.containsKey(id)
+        val isCustomer = Bank.customerList.containsKey(id)
         if (isCustomer) {
-            val customer = Bank.customers[id]
+            val customer = Bank.customerList[id]
             println("you are already our customer");if (customer != null) {
-                creditCard(customer)
+                createCreditCard(customer)
             }
         } else {
             println("you are not our customer")
@@ -30,9 +30,9 @@ class CreditCardActions {
         }
     }
 
-    private fun creditCard(customer: Customer) {
+    private fun createCreditCard(customer: Customer) {
         for (actions in CreditCardEnum.values()) {
-            println(actions)
+            println("${actions.key} $actions")
         }
         print("choose what type of Credit Card you want: ")
         when (MainMenu.scan.nextInt()) {
@@ -41,7 +41,8 @@ class CreditCardActions {
             3 -> card = CreditCard(CreditCardEnum.VISA_INFINITE)
             else -> CustomerMenu.menuForCustomer()
         }
-        Bank.cards[customer.passport.id] = listOf(card)
+        cards.add(card)
+        Bank.cardlist[customer.passport.id] = cards
         CustomerMenu.menuForCustomer()
     }
 }

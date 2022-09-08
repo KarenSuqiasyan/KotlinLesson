@@ -1,9 +1,9 @@
 package lesson4BankApplication.ui.bank.products
 
 import lesson4BankApplication.ui.customer.CustomerMenu
-import lesson4BankApplication.ui.MainMenu
+import lesson4BankApplication.validation.Validation
 
-object BankProducts {
+object BankProductsMenu {
 
     private val cashInCashOut = CashInCashOutActions()
     private val loansActions = LoansActions()
@@ -12,7 +12,7 @@ object BankProducts {
         for (actions in BankProductsEnum.values()) {
             println(actions)
         }
-        when (MainMenu.scan.nextInt()) {
+        when (Validation.validForMenu()) {
             1 -> loansActions.getLoan()
             2 -> cashInCashOut.cashIn()
             3 -> cashInCashOut.cashOut()

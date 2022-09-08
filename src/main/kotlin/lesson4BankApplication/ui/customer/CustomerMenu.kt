@@ -2,19 +2,19 @@ package lesson4BankApplication.ui.customer
 
 
 import lesson4BankApplication.ui.MainMenu
-import lesson4BankApplication.ui.bank.products.BankProducts
-import lesson4BankApplication.ui.customer.CustomerMenuActions.Companion.calculator
-import lesson4BankApplication.ui.customer.CustomerMenuActions.Companion.registration
+import lesson4BankApplication.ui.bank.products.BankProductsMenu
+import lesson4BankApplication.validation.Validation
 
 object CustomerMenu {
+    private val customerMenuActions = CustomerMenuActions()
     fun menuForCustomer() {
         for (actions in CustomerMenuEnum.values()) {
             println(actions)
         }
-        when (MainMenu.scan.nextInt()) {
-            1 -> registration()
-            2 -> BankProducts.menuForBankProducts()
-            3 -> calculator()
+        when (Validation.validForMenu()) {
+            1 -> customerMenuActions.registration()
+            2 -> BankProductsMenu.menuForBankProducts()
+            3 -> customerMenuActions.calculator()
             4 -> MainMenu.mainMenu()
             else -> menuForCustomer()
         }

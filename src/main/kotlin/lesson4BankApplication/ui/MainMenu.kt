@@ -1,6 +1,7 @@
 package lesson4BankApplication.ui
 
 import lesson4BankApplication.ui.customer.CustomerMenu
+import lesson4BankApplication.validation.Validation
 import java.util.*
 
 object MainMenu {
@@ -9,7 +10,7 @@ object MainMenu {
         for (actions in MainMenuEnum.values()) {
             println(actions)
         }
-        when (scan.nextInt()) {
+        when (Validation.validForMenu()) {
             1 -> CustomerMenu.menuForCustomer()
             2 -> BankMenu.menuForBank()
             3 -> System.out

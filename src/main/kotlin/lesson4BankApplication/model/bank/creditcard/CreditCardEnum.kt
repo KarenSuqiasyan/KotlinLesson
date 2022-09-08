@@ -1,6 +1,6 @@
 package lesson4BankApplication.model.bank.creditcard
 
-enum class CreditCardEnum(val key: Int, private val type: String, val description: String) {
+enum class CreditCardEnum(val key: Int, private val type: String, private val description: String) {
 
     VISA_CLASSIC(
         1,
@@ -20,6 +20,6 @@ enum class CreditCardEnum(val key: Int, private val type: String, val descriptio
     );
 
     override fun toString(): String {
-        return "$key. $type. $description"
+        return "$type. $description"
     }
 }

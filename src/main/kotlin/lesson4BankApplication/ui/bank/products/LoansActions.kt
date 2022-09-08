@@ -9,15 +9,14 @@ import lesson4BankApplication.ui.MainMenu
 
 class LoansActions {
 
-
     fun getLoan() {
 
         println("we can offer you a credit")
         println("please wright your ID: ")
         val id: Int = MainMenu.scan.nextInt()
-        val isCustomer = Bank.customers.containsKey(id)
+        val isCustomer = Bank.customerList.containsKey(id)
         if (isCustomer) {
-            val customer = Bank.customers[id]
+            val customer = Bank.customerList[id]
             println("you are already our customer");if (customer != null) {
                 loan(customer)
             }

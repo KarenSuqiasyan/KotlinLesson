@@ -6,6 +6,7 @@ import lesson4BankApplication.model.customer.Passport
 import lesson4BankApplication.ui.MainMenu
 
 fun main() {
-    Bank.customers[1] = Customer(100000, Passport(1, "Karen", "Sukiasyan", 29))
+    Bank.customerList[1] = Customer(200000, Passport(1, "Karen", "Sukiasyan", 29))
+    Bank.customerList[2] = Customer(2000000, Passport(2, "Karo", "Hovhannisyan", 29))
     MainMenu.mainMenu()
 }
